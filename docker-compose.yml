@@ -8,6 +8,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
+      MODE: $MODE
+      VITE_DB_URI: $VITE_DB_URI
       VIRTUAL_HOST: test.home.santiagodenicolas.com
       LETSENCRYPT_HOST: test.home.santiagodenicolas.com
       LETSENCRYPT_EMAIL: santiago@denicolas.com.ar
