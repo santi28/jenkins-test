@@ -11,6 +11,7 @@ services:
       VIRTUAL_HOST: test.home.santiagodenicolas.com
       LETSENCRYPT_HOST: test.home.santiagodenicolas.com
       LETSENCRYPT_EMAIL: santiago@denicolas.com.ar
+      VIRTUAL_PORT: 4173
     networks:
       - nginx-proxy-background
     extra_hosts:
