@@ -23,8 +23,8 @@ pipeline {
 
     stage('Starting docker compose') {
       steps {
-        sh 'docker-compose up -d --no-color --await'
-        sh 'docker-compose ps'
+        sh 'docker compose up -d --no-color --await'
+        sh 'docker compose ps'
       }
     }
   }
