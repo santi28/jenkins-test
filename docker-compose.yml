@@ -4,7 +4,7 @@ services:
     image: docker.home.santiagodenicolas.com/jenkins-test:latest
     container_name: jenkins-test-app
     ports:
-      - "30201:3000"
+      - "30201:4173"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
