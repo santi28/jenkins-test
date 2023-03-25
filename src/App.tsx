@@ -12,8 +12,7 @@ function App() {
       <div>
         <img src={JenkinsLogo} className='logo' />
       </div>
-      <h1>CI/CD With Jenkins and Docker Compose</h1>
-      <span className='new'>NOW WITH CI/CD</span>
+      <h1><span>CI/CD</span> with jenkins and docker</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
