@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Ping') {
+    stage('Verificamos que tome el jenkis file') {
       steps {
-        echo 'Pong'
+        echo 'Si lo estoy ejecutando'
       }
     }
   }
