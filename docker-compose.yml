@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  jenkins-test-app:
+    image: docker.home.santiagodenicolas.com/jenkins-test:latest
+    container_name: jenkins-test-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      VIRTUAL_HOST: test.home.santiagodenicolas.com
+      LETSENCRYPT_HOST: test.home.santiagodenicolas.com
+      LETSENCRYPT_EMAIL: santiago@denicolas.com.ar
+    networks:
+      - nginx-proxy-background
+
+networks:
+  nginx-proxy-background:
+    external: true

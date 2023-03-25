@@ -14,4 +14,4 @@ RUN npm install
 EXPOSE 3000
 
 # Ejecución del comando
-CMD ["npm", "start"]
+CMD ["npm", "preview"]
