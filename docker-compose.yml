@@ -13,6 +13,8 @@ services:
       LETSENCRYPT_EMAIL: santiago@denicolas.com.ar
     networks:
       - nginx-proxy-background
+    extra_hosts:
+      - "test.home.santiagodenicolas.com:192.168.55.45"
 
 networks:
   nginx-proxy-background:
