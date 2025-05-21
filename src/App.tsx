@@ -2,29 +2,23 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import JenkinsLogo from './assets/jenkins.svg'
 
-import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <div>
-        <img src={JenkinsLogo} className='logo' />
+    <div className="bg-zinc-800 h-screen text-white flex flex-col items-center">
+      <img src={JenkinsLogo} className='mt-20' />
+      <h1 className='text-5xl'>
+        <span className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>CI/CD </span>
+        with jenkins and docker
+      </h1>
+
+      <div className='w-full max-w-sm mt-5'>
+        <h2 className='text-xl'>Variables de entorno</h2>
+        <h3><span className='font-bold'>Enviroment:</span> {import.meta.env.MODE}</h3>
+        <h3><span className='font-bold'>DB Access:</span> {import.meta.env.VITE_DB_URI}</h3>
       </div>
-      <h1>CI/CD With Jenkins and Docker Compose</h1>
-      <span className='new'>NOW WITH CI/CD</span>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }

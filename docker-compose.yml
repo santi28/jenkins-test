@@ -4,15 +4,20 @@ services:
     image: docker.home.santiagodenicolas.com/jenkins-test:latest
     container_name: jenkins-test-app
     ports:
-      - "8080:8080"
+      - "30201:4173"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
+      MODE: $MODE
+      VITE_DB_URI: $VITE_DB_URI
       VIRTUAL_HOST: test.home.santiagodenicolas.com
       LETSENCRYPT_HOST: test.home.santiagodenicolas.com
       LETSENCRYPT_EMAIL: santiago@denicolas.com.ar
+      VIRTUAL_PORT: 4173
     networks:
       - nginx-proxy-background
+    extra_hosts:
+      - "test.home.santiagodenicolas.com:192.168.55.45"
 
 networks:
   nginx-proxy-background:
